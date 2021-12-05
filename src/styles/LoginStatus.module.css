@@ -1,0 +1,19 @@
+.redclass {
+    border: 1px solid red;
+  }
+  .fillit {
+    background-color: salmon;
+  }
+.LoginStatus {
+width:10vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.LoginStatus h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}

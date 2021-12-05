@@ -1,12 +1,13 @@
 import LoginForm from "./components/LoginForm";
 import HomePage from "./components/HomePage";
+import LoginStatus from './components/LoginStatus'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
       <header className="app-header">
         <div className="logo"><h2 className="main-logo-part1 font-effect-3d">= wayana</h2>
-          <h2 className="main-logo-part2">dev</h2></div>
+          <h2 className="main-logo-part2">dev &gt;</h2></div>
 
         <nav className="app-nav">
           <ul className="nav-links">
@@ -14,7 +15,7 @@ function App() {
             <li className="nav-link ">About</li>
           </ul>
         </nav>
-        {/* <LoginStatus></LoginStatus> */}
+        <LoginStatus></LoginStatus>
       </header>
       <BrowserRouter>
         <Routes>
