@@ -14,6 +14,16 @@ function App() {
         <Routes>
           <Route
             path="/"
+            exact
+            element={
+              <div className="app-content ">
+                <LoginForm className="LoginForm "></LoginForm>
+              </div>
+            }
+          ></Route>
+          <Route
+            path="/login"
+            exact
             element={
               <div className="app-content ">
                 <LoginForm className="LoginForm "></LoginForm>

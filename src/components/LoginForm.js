@@ -8,6 +8,15 @@ export default function LoginForm() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const submitForm = () => {
+    event.preventDefault();
+    if(username==='arun')
+    navigate(`/home`);
+    else 
+    navigate(`/`);
+    
+  }
   return (
     <form className="login-form  flex-col" method="POST">
       <img className ="lock-image" src={PrivacyImage} alt="lock"/>
@@ -16,18 +25,18 @@ export default function LoginForm() {
         name="username"
         className="login-username form-item login-form-input"
         value={username}
+        onChange={(e)=>{setUsername(e.target.value)}}
       ></input>
       <input
         type="password"
         name="password"
         className="login-password form-item login-form-input"
         value={password}
+        onChange={(e)=>{setPassword(e.target.value)}}
       ></input>
       <button
         type="submit"
-        onClick={() => {
-          navigate(`/home`);
-        }}
+        onClick={submitForm}
         className="login-button btn btn-warning form-item"
       >
         Login
