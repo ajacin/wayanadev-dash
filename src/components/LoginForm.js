@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../styles.css";
 import { useNavigate, Link } from "react-router-dom";
+import LockLogo from "../images/handle.png"
+import PrivacyImage from "../images/privacy.png"
 
 export default function LoginForm() {
   const navigate = useNavigate();
@@ -8,6 +10,7 @@ export default function LoginForm() {
   const [password, setPassword] = useState("");
   return (
     <form className="login-form  flex-col" method="POST">
+      <img className ="lock-image" src={PrivacyImage} alt="lock"/>
       <input
         type="text"
         name="username"
