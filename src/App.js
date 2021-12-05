@@ -1,6 +1,6 @@
 import LoginForm from "./components/LoginForm";
 import HomePage from "./components/HomePage";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/login"
+            path="/"
             element={
               <div className="app-content ">
                 <LoginForm className="LoginForm "></LoginForm>
