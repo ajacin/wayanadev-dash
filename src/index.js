@@ -10,10 +10,12 @@ const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <Provider store={store}>
+  
   <StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </StrictMode>
-  </Provider>,
+  ,
   rootElement
 );

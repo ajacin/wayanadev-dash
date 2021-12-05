@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "../styles.css";
-import { useNavigate, Link } from "react-router-dom";
-import LockLogo from "../images/handle.png"
+import { useNavigate } from "react-router-dom";
+import {useDispatch,useSelector} from 'react-redux'
 import PrivacyImage from "../images/privacy.png"
+import {login} from '../actions';
+
 
 export default function LoginForm() {
   const navigate = useNavigate();
+  const state = useSelector(state => state.LoginStatusReducer)
+  const dispatch = useDispatch()
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const submitForm = () => {
     event.preventDefault();
-    if(username==='arun')
-    navigate(`/home`);
+    if(username==='admin' && password ==='admin')
+    {
+      dispatch(login(username))
+      navigate(`/home`);
+    }
+    
     else 
     navigate(`/`);
     
