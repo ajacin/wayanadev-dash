@@ -2,6 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -18,20 +24,25 @@ body {
   height: 100vh;
   flex-direction: column;
 }
+
 .main-logo-part1 {
   color: white;
   display: inline;
+  font-family: sans-serif;
 }
 .main-logo-part2 {
   display: inline;
   color: rgb(154, 219, 208);
+  font-family: sans-serif;
 }
 
 .app-header {
   flex: 1;
   height: 10vh;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
@@ -47,7 +58,26 @@ body {
 .fillit {
   background-color: salmon;
 }
+.logo {
+  flex:1;
+}
+nav {
+  flex:1;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
 
+}
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+    width: 100%;
+  flex-direction: row;
+}
+.nav-link {
+  display: flex;
+  margin-left: 10px;
+}
 .app-content {
   display: flex;
   flex-grow: 1;
@@ -57,6 +87,7 @@ body {
   align-items: center;
 }
 .app-nav {
+  display: flex;
 }
 
 .LoginForm {
@@ -131,4 +162,9 @@ body {
     justify-content: space-between;
     align-content: center;
   }
+  .logo,nav{
+    font-size: 12px;
+  }
 }
+
+
