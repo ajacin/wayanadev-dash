@@ -1,13 +1,42 @@
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right,#667eea, #764ba2);
+  /* #667eea → #764ba2 */
+
+}
 .App {
   font-family: sans-serif;
   /* text-align: center; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: azure;
+  background-color: transparent;
   height: 100vh;
   flex-direction: column;
 }
+.main-logo-part1 {
+  color: white;
+  display: inline;
+}
+.main-logo-part2 {
+  display: inline;
+  color: rgb(154, 219, 208);
+}
+
+.app-header {
+  flex:1;
+  height:10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:10px;
+}
+
 
 .flex-col {
   display: flex;
@@ -17,11 +46,15 @@
 .redclass {
   border: 1px solid red;
 }
+.fillit {
+  background-color: salmon;
+}
 
 .app-content {
   display: flex;
   flex-grow: 1;
-  width: 100vw;
+  flex:9;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -34,15 +67,20 @@
 }
 
 .login-form {
-  width: 50vw;
+  width: 25vw;
   justify-content: space-between;
   align-content: center;
+  /* background: linear-gradient(to right,#96deda,#f4f7f6); */
+  padding:20px;
+  border: 1px solid #96deda;
+  border-radius: 10px;;
+  box-shadow: white;
+
 }
 
 .form-item {
   margin-top: 10px;
   height: 5vh;
-  text-align: center;
   border: 1px solid gray;
 }
 
@@ -75,4 +113,11 @@
 .form-item + button:hover {
   color: #14396a !important;
   background: solid;
+}
+@media screen and (max-width:800px){
+  .login-form {
+    width: 90vw;
+    justify-content: space-between;
+    align-content: center;
+  }
 }
