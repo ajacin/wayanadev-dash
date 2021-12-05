@@ -17,3 +17,9 @@ align-items: center;
     justify-content: center;
     color: white;
 }
+
+@media screen and (max-width: 400px) {
+    .LoginStatus {
+        display: none;
+        }
+  }
