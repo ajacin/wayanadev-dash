@@ -4,20 +4,27 @@ import { useNavigate } from "react-router-dom";
 import {useDispatch,useSelector} from 'react-redux'
 import PrivacyImage from "../images/privacy.png"
 import {login} from '../actions';
+import {useAuth0} from '@auth0/auth0-react'
+
+
 
 
 export default function LoginForm() {
   const navigate = useNavigate();
   const state = useSelector(state => state.LoginStatusReducer)
   const dispatch = useDispatch()
+  const {loginWithRedirect} = useAuth0()
+  const {user,isAuthenticated} =useAuth0();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const submitForm = () => {
-    event.preventDefault();
-    if(username==='admin' && password ==='admin')
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    // if(username==='admin' && password ==='admin') tesitng
+    if(user)
     {
-      dispatch(login(username))
+      dispatch(login(user.email))
       navigate(`/home`);
     }
     
@@ -25,6 +32,11 @@ export default function LoginForm() {
     navigate(`/`);
     
   }
+
+  const Login = () =>{ 
+    loginWithRedirect();
+  }
+
   return (
     <form className="login-form  flex-col" method="POST">
       <img className ="lock-image" src={PrivacyImage} alt="lock"/>
@@ -49,6 +61,13 @@ export default function LoginForm() {
       >
         Login
       </button>
+      <button
+        onClick={Login}
+        className="login-button btn btn-warning form-item"
+      >
+        Auth0
+      </button>
+      <div>   {user?JSON.stringify(user,null,2):'nah'}</div>
     </form>
   );
 }
