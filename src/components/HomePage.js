@@ -15,9 +15,9 @@ export default function LoginForm() {
   }
   //logut end
   const {user} =useAuth0();
-  useEffect(() => {
-    if(!loginStatusState.isLoggedIn) navigate('/login');
-  }, [])
+  // useEffect(() => {
+  //   if(!loginStatusState.isLoggedIn) navigate('/login');
+  // }, [])
   
   return (
     <div className={Styles.HomePage}>

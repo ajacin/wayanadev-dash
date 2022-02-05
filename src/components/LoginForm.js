@@ -34,8 +34,22 @@ export default function LoginForm() {
   }
 
   const Login = () =>{ 
-    loginWithRedirect();
+     loginWithRedirect({
+      redirect_uri: 'http://localhost:3000/home'
+    });
+    console.log('hit this')
+    // dispatch(login(user.email))
+    // navigate(`/home`);
   }
+
+ useEffect(() => {
+   if(isAuthenticated){
+    dispatch(login(user.email))
+    navigate(`/home`);
+   }
+  
+ }, [isAuthenticated]);
+ 
 
   return (
     <form className="login-form  flex-col" method="POST">
