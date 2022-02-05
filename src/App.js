@@ -15,7 +15,7 @@ function App() {
             <li className="nav-link ">About</li>
           </ul>
         </nav>
-        <LoginStatus></LoginStatus>
+        {/* <LoginStatus></LoginStatus> */}
       </header>
       <BrowserRouter>
         <Routes>
@@ -23,7 +23,7 @@ function App() {
             path="/"
             exact
             element={
-              <div className="app-content ">
+              <div className="app-content-login">
                 <LoginForm className="LoginForm "></LoginForm>
               </div>
             }
@@ -32,7 +32,7 @@ function App() {
             path="/login"
             exact
             element={
-              <div className="app-content ">
+              <div className="app-content-login">
                 <LoginForm className="LoginForm "></LoginForm>
               </div>
             }

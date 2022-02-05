@@ -8,6 +8,19 @@
 
 button {
   font-family: 'Poppins', sans-serif;
+  /* font-family: arial; */
+  color: #14396a !important;
+  font-size: 14px;
+  padding: 10px 25px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #63b8ee;
+  height: 40px;
+}
+button:hover {
+  color: #14396a !important;
+  background: solid;
 }
 
 body {
@@ -45,7 +58,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 .flex-col {
@@ -53,7 +66,7 @@ body {
   flex-direction: column;
 }
 
-.redclass {
+.red {
   border: 1px solid red;
 }
 .fillit {
@@ -90,6 +103,14 @@ nav {
   width: 100%;
   justify-content: center;
   align-items: flex-start;
+}
+.app-content-login {
+  display: flex;
+  flex-grow: 1;
+  flex: 9;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .app-nav {
   display: flex;

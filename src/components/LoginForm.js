@@ -52,7 +52,9 @@ export default function LoginForm() {
  
 
   return (
-    <form className="login-form  flex-col" method="POST">
+    <div className="login-form flex-col">
+    <img className ="lock-image" src={PrivacyImage} alt="lock"/>
+    {/* <form className="login-form  flex-col" method="POST">
       <img className ="lock-image" src={PrivacyImage} alt="lock"/>
       <input
         type="text"
@@ -79,9 +81,16 @@ export default function LoginForm() {
         onClick={Login}
         className="login-button btn btn-warning form-item"
       >
-        Auth0
+        Login
       </button>
-      <div>   {user?JSON.stringify(user,null,2):'nah'}</div>
-    </form>
+      <div>   {user?JSON.stringify(user,null,2):''}</div>
+    </form> */}
+    <button
+        onClick={Login}
+        className="login-button btn btn-warning form-item"
+      >
+        Login
+      </button>
+    </div>
   );
 }
