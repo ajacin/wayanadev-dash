@@ -2,6 +2,7 @@ import LoginForm from "./components/LoginForm";
 import HomePage from "./components/HomePage";
 import LoginStatus from './components/LoginStatus'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ApplicationRoutes from "./components/ApplicationRoutes";
 function App() {
   return (
     <div className="App">
@@ -17,36 +18,7 @@ function App() {
         </nav>
         {/* <LoginStatus></LoginStatus> */}
       </header>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            exact
-            element={
-              <div className="app-content-login">
-                <LoginForm className="LoginForm "></LoginForm>
-              </div>
-            }
-          ></Route>
-          <Route
-            path="/login"
-            exact
-            element={
-              <div className="app-content-login">
-                <LoginForm className="LoginForm "></LoginForm>
-              </div>
-            }
-          ></Route>
-          <Route
-            path="/home"
-            element={
-              <div className="app-content ">
-                <HomePage className="HomePage "></HomePage>
-              </div>
-            }
-          ></Route>
-        </Routes>
-      </BrowserRouter>
+      <ApplicationRoutes></ApplicationRoutes>
       <footer>
         <a href="https://www.linkedin.com/in/ajacin/" target="_blank">arun jacob</a>
       </footer>
