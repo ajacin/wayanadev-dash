@@ -9,24 +9,27 @@ export default function LoginForm() {
   const navigate = useNavigate()
   const loginStatusState = useSelector(state => state.LoginStatusReducer)
 //logout
-  const {logout} = useAuth0()
+  const {logout,user,isAuthenticated} = useAuth0()
   const LogoutApp = () =>{
     logout()
   }
   //logut end
-  const {user} =useAuth0();
-  // useEffect(() => {
-  //   if(!loginStatusState.isLoggedIn) navigate('/login');
-  // }, [])
+  // const {user,isAuthenticated} =useAuth0();
+  useEffect(() => {
+    if(!isAuthenticated) navigate('/login');
+  }, [])
   
   return (
-    <div className={Styles.HomePage}>
+    isAuthenticated &&
+    (<div className={Styles.HomePage}>
+      <UserCard user={user}></UserCard>
+      <UserCard user={user}></UserCard>
       <UserCard user={user}></UserCard>
       Hello {loginStatusState.user.name}! Welcome
       {user?JSON.stringify(user,null,2):'nah'}
       <button onClick={LogoutApp}>Logout</button>
 
 
-    </div>
+    </div>)
   );
 }

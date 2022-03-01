@@ -47,6 +47,9 @@ function App() {
           ></Route>
         </Routes>
       </BrowserRouter>
+      <footer>
+        <a href="https://www.linkedin.com/in/ajacin/" target="_blank">arun jacob</a>
+      </footer>
     </div>
   );
 }
