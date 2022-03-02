@@ -3,6 +3,7 @@ import HomePage from "./components/HomePage";
 import LoginStatus from './components/LoginStatus'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ApplicationRoutes from "./components/ApplicationRoutes";
+import Navigation from './components/Navigation'
 function App() {
   return (
     <div className="App">
@@ -10,12 +11,7 @@ function App() {
         <div className="logo"><h2 className="main-logo-part1 font-effect-3d">= wayana</h2>
           <h2 className="main-logo-part2">dev &gt;</h2></div>
 
-        <nav className="app-nav">
-          <ul className="nav-links">
-            <li className="nav-link">Blog</li>
-            <li className="nav-link ">About</li>
-          </ul>
-        </nav>
+      <Navigation></Navigation>
         {/* <LoginStatus></LoginStatus> */}
       </header>
       <ApplicationRoutes></ApplicationRoutes>
