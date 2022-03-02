@@ -20,7 +20,7 @@ function App() {
       </header>
       <ApplicationRoutes></ApplicationRoutes>
       <footer>
-        <a href="https://www.linkedin.com/in/ajacin/" target="_blank">arun jacob</a>
+        <a href="https://www.linkedin.com/in/ajacin/" target="_blank">© 2022 Arun Jacob.  All rights reserved</a>
       </footer>
     </div>
   );

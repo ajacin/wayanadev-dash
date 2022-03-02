@@ -25,6 +25,18 @@ button:hover {
   box-shadow: 0 0 10px #000000;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: x-small;
+}
+
 body {
   background: linear-gradient(to right, #273b7a, #476bdd);
 }
