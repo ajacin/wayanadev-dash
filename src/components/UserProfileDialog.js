@@ -11,12 +11,22 @@ import Dialog from "@mui/material/Dialog";
 import PersonIcon from "@mui/icons-material/Person";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
+import ClearIcon from "@mui/icons-material/Clear";
+import { SettingsInputComponent } from "@material-ui/icons";
 
-export default function UserProfileDialog({ open, user }) {
+export default function UserProfileDialog({ open, setOpen, user }) {
   //   const [open, setOpen] = React.useState(false);
+
+  const closeModal = () => {
+    setOpen(false);
+  };
 
   return (
     <Dialog open={open}>
+      <ClearIcon
+        onClick={closeModal}
+        style={{ alignSelf: "flex-end", color: "red", cursor: "pointer" }}
+      />
       <DialogTitle>Profile Information</DialogTitle>
       <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
         <ListItem alignItems="flex-start">
@@ -41,7 +51,6 @@ export default function UserProfileDialog({ open, user }) {
           />
         </ListItem>
         {/* <Divider variant="inset" component="li" /> */}
-        {`>>>>>>> CLOSE PROFILE INFORMATION !!!`}
       </List>
     </Dialog>
   );

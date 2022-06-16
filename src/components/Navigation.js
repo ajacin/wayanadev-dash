@@ -124,7 +124,11 @@ const Navigation = () => {
             </MenuItem>
           </Menu>
         </nav>
-        <UserProfileDialog open={showProfile} user={user}></UserProfileDialog>
+        <UserProfileDialog
+          open={showProfile}
+          setOpen={setShowProfile}
+          user={user}
+        ></UserProfileDialog>
       </>
     )
   );
