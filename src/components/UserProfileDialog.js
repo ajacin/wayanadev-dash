@@ -35,22 +35,26 @@ export default function UserProfileDialog({ open, setOpen, user }) {
           </ListItemAvatar>
           <ListItemText
             primary={user.name}
+            secondary={<>{`${user.email}`}</>}
+          />
+        </ListItem>
+        <Divider variant="inset" component="li" />
+        <ListItem>
+          <ListItemText secondary={<>{`Nickname : ${user.nickname}`}</>} />
+        </ListItem>
+        <ListItem>
+          <ListItemText secondary={<>{`Locale : ${user.locale}`}</>} />
+        </ListItem>
+        <ListItem>
+          <ListItemText
             secondary={
-              <React.Fragment>
-                <Typography
-                  sx={{ display: "inline" }}
-                  component="span"
-                  variant="body2"
-                  color="text.primary"
-                >
-                  {user.nickname}
-                </Typography>
-                {` | ${user.email}`}
-              </React.Fragment>
+              <>{`Email verified : ${user.email_verified ? "Yes" : "No"}`}</>
             }
           />
         </ListItem>
-        {/* <Divider variant="inset" component="li" /> */}
+        <ListItem>
+          <ListItemText secondary={<>{`${user.sub}`}</>} />
+        </ListItem>
       </List>
     </Dialog>
   );
